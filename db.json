@@ -1,14 +1,25 @@
 {
-  "todos": [
-    {
-      "id": "0",
-      "title": "Go to work",
-      "isCompleted": false
-    },
+  "categories": [
     {
       "id": "1",
-      "title": "Working...",
-      "isCompleted": false
+      "name": "Docker"
+    },
+    {
+      "id": "2",
+      "name": "CI CD"
+    },
+    {
+      "id": "3",
+      "name": "NodeJS"
+    },
+    {
+      "id": "4",
+      "name": "Golang"
+    },
+    {
+      "id": "5",
+      "name": "Kubernetes"
     }
-  ]
+  ],
+  "blogs": []
 }
