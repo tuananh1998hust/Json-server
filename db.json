@@ -3,32 +3,32 @@
     {
       "id": "1",
       "name": "Docker",
-      "img": "/images/docker.png"
+      "img": "/images/docker.JPEG"
     },
     {
       "id": "2",
       "name": "CI CD",
-      "img": "/images/cicd.png"
+      "img": "/images/cicd.JPEG"
     },
     {
       "id": "3",
       "name": "NodeJS",
-      "img": "/images/nodejs.jpg"
+      "img": "/images/nodejs.JPEG"
     },
     {
       "id": "4",
       "name": "Golang",
-      "img": "/images/golang.jpg"
+      "img": "/images/golang.JPEG"
     },
     {
       "id": "5",
       "name": "Kubernetes",
-      "img": "/images/kubernetes.png"
+      "img": "/images/kubernetes.JPEG"
     },
     {
       "id": "6",
       "name": "Testing",
-      "img": "/images/testing.jpg"
+      "img": "/images/testing.JPEG"
     }
   ],
   "blogs": []
