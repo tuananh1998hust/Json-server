@@ -2,23 +2,28 @@
   "categories": [
     {
       "id": "1",
-      "name": "Docker"
+      "name": "Docker",
+      "img": "/images/docker.png"
     },
     {
       "id": "2",
-      "name": "CI CD"
+      "name": "CI CD",
+      "img": "/images/cicd.png"
     },
     {
       "id": "3",
-      "name": "NodeJS"
+      "name": "NodeJS",
+      "img": "/images/nodejs.jpg"
     },
     {
       "id": "4",
-      "name": "Golang"
+      "name": "Golang",
+      "img": "/images/golang.jpg"
     },
     {
       "id": "5",
-      "name": "Kubernetes"
+      "name": "Kubernetes",
+      "img": "/images/kubernetes.png"
     }
   ],
   "blogs": []
