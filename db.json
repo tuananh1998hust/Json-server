@@ -24,6 +24,11 @@
       "id": "5",
       "name": "Kubernetes",
       "img": "/images/kubernetes.png"
+    },
+    {
+      "id": "6",
+      "name": "Testing",
+      "img": "/images/testing.jpg"
     }
   ],
   "blogs": []
