@@ -31,5 +31,32 @@
       "img": "/images/testing.JPEG"
     }
   ],
-  "blogs": []
+  "posts": [
+    {
+      "id": "0",
+      "name": "Docker cơ bản(P1)",
+      "title": "Docker là gì, Docker là chi, zô ngay để giáo sư của NNVGM hướng dẫn bạn tìm hiểu Docker và làm chủ nó ngay nào...",
+      "contents": [],
+      "category": [
+        {
+          "id": "1",
+          "name": "Docker"
+        }
+      ],
+      "img": "/images/docker.JPEG"
+    },
+    {
+      "id": "1",
+      "name": "Docker cơ bản(P2)",
+      "title": "Các bạn đã học Docker cơ bản(P1) chưa? Rồi thì click vô ngay đây để tiếp tục cùng giáo sư của NNVGM thử set up docker với 1 dự án thực xem sao...",
+      "contents": [],
+      "category": [
+        {
+          "id": "1",
+          "name": "Docker"
+        }
+      ],
+      "img": "/images/docker.JPEG"
+    }
+  ]
 }
