@@ -36,20 +36,243 @@
       "id": "0",
       "name": "Docker cơ bản(P1)",
       "title": "Docker là gì, Docker là chi, zô ngay để giáo sư của NNVGM hướng dẫn bạn tìm hiểu Docker và làm chủ nó ngay nào...",
-      "contents": [],
-      "category": [
+      "contents": [
+        {
+          "id": "0",
+          "type": 11,
+          "content": "/images/posts/docker-p1-01.png"
+        },
         {
           "id": "1",
-          "name": "Docker"
+          "type": 4,
+          "content": "Docker là 1 platform giúp bạn triển khai các ứng dụng dưới dạng các container. Điều mình thích nhất ở Docker đó chính là Docker giúp bạn build ra các image, và bạn có thể mang image đó đến bất cứ đâu và chạy nó lên. Chính vì vậy môi trường giữa các thành viên trong team sẽ giống nhau hơn, cũng như môi trường develop sẽ giống môi trường stagging và production hơn. Khi có một thành viên mới vào team, bạn đó sẽ phải loay hoay cài các platform dựng môi trường mất rất nhiều time. Và với docker bạn sẽ giải quyết vấn đề đó trong một vài command thôi. Chính vì vậy tại công ty mình đang làm việc gần như tất cả mọi thành viên vào làm việc đều được training Docker trước. Trong phần này mình sẽ đề cập tới mô hình hoạt động của Docker, các command cơ bản của docker giúp các bạn từ không biết gì về docker tới làm chủ docker nha... =))"
+        },
+        {
+          "id": "2",
+          "type": 2,
+          "content": "Mô hình hoạt động của Docker"
+        },
+        {
+          "id": "3",
+          "type": 6,
+          "content": {
+            "img": "/images/posts/docker-p1-02.png",
+            "text": "Docker Architecture"
+          }
+        },
+        {
+          "id": "4",
+          "type": 4,
+          "content": "Docker hoạt động theo mô hình client server. Tại máy dev bạn sẽ sử dụng CLI(docker) để giao tiếp với API trên Docker Host. Docker Host sẽ có một con Docker Daemon (dockerd). Con Docker Daemon Server này sẽ quản lý các objects của Docker như Images, Container, Network, Volumes... Ở trên mình có giới thiệu Docker là 1 platform giúp triển khai các ứng dụng trên container. Vậy nó hoạt động ra sao. Ở máy dev bạn sử dụng lệnh docker ra lệnh docker Docker Daemon chạy Images sau đó sẽ thực hiện check xem tại máy đã có Images đó hay chưa. Nếu chưa có sẽ thực hiện pull image từ Docker Registry (Docker Registry là nơi lưu trữ rất nhiều Images. Docker Hub là một public Registry). Sau đó khi Images chạy sẽ tạo ra các Container."
+        },
+        {
+          "id": "5",
+          "type": 2,
+          "content": "Các Objects quen thuộc trong Docker"
+        },
+        {
+          "id": "6",
+          "type": 3,
+          "content": "Images"
+        },
+        {
+          "id": "7",
+          "type": 4,
+          "content": "Images là gì? Có ăn được không? Có lẽ các bạn khá quen thuộc với Github rồi. Vậy mình sẽ so sánh với Github cho dễ nha. 1 Images gần giống như 1 repository của Github. Chứa đủ tất cả các thứ cần thiết để chạy dự án của bạn. Giả sử bạn pull 1 dự án NodeJS từ Github về. Bạn phải có môi trường NodeJS để chạy dự án đó. Bạn muốn chạy dự án Python bạn phải cài đặt môi trường Python. Và việc dựng môi trường đôi khi máy A lại khác máy B nữa. Hệ điều hành window lại khác Linux rồi lại khác MacOS. Với docker việc bạn cần là chạy Images và Docker Image đã chứa môi trường NodeJS, Python cần thiết cho dự án của bạn khi đóng gói Images rồi."
+        },
+        {
+          "id": "8",
+          "type": 3,
+          "content": "Container"
+        },
+        {
+          "id": "9",
+          "type": 4,
+          "content": "Khi chạy một Images một Container sẽ được tạo ra tương úng với dự án của bạn. Container là 1 môi trường ảo hóa và sẽ sử dụng chung kernel của OS máy host với các container khác. Container sẽ vô cùng nhẹ và không chiếm nhiều tài nguyên"
+        },
+        {
+          "id": "10",
+          "type": 6,
+          "content": {
+            "img": "/images/posts/docker-p1-03.png",
+            "text": "Compare Container With Virtual Machine"
+          }
+        },
+        {
+          "id": "11",
+          "type": 3,
+          "content": "Networks"
+        },
+        {
+          "id": "12",
+          "type": 4,
+          "content": "Nếu truy cập docs Networks của Docker thì bạn sẽ thấy ngay dòng giới thiệu mở đầu: điểm mạnh của docker container và service chính là chúng có thể kết nối với nhau. Vì vậy networks trong Docker cơ bản có nhiệm vụ để connect các container với nhau. Trong đó driver bride(default driver là được sử dụng nhiều nhất"
+        },
+        {
+          "id": "13",
+          "type": 3,
+          "content": "Volumes"
+        },
+        {
+          "id": "14",
+          "type": "4",
+          "content": "Volumes được sử dụng để duy trì dữ liệu đã sử dụng trong container."
+        },
+        {
+          "id": "15",
+          "type": "4",
+          "content": "Nói không bằng làm giờ mình sẽ cùng các bạn cài đặt Docker và thử làm chủ Docker trong 1 blog xem sao nhé"
+        },
+        {
+          "id": "16",
+          "type": "3",
+          "content": "Cài đặt Docker"
+        },
+        {
+          "id": "17",
+          "type": "12",
+          "content": "<p>Với các bạn đang sử dụng Window hoặc MacOS bạn hãy tải <a href='https://hub.docker.com/?overlay=onboarding' target='_blank'>Docker Desktop</a></p>"
+        },
+        {
+          "id": "18",
+          "type": "12",
+          "content": "<p>Với các bạn sử dụng Linux. Ở đây mình đề cập cách cài đặt ở ubuntu thì <a href='https://docs.docker.com/install/' target='_blank'>Click vô đây</a> và chọn kiểu hệ điều hành Linux mình đang sử dụng để cài đặt nha. Sau đó thì tiến hành cài đặt docker-compose <a href='https://docs.docker.com/compose/install/' target='_blank'>ở đây</a></p>"
+        },
+        {
+          "id": "19",
+          "type": 6,
+          "content": {
+            "img": "/images/posts/docker-p1-04.png",
+            "text": "Docker Container Runtime"
+          }
+        },
+        {
+          "id": "20",
+          "type": 4,
+          "content": "Khi Docker được cài đặt thì trên tầng OS sẽ là 1 tầng Container Runtime giúp bạn chạy các container ở bên trên"
+        },
+        {
+          "id": "21",
+          "type": 3,
+          "content": "Các command cơ bản"
+        },
+        {
+          "id": "22",
+          "type": 10,
+          "content": [
+            "$ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]",
+            "$ docker run -it node:10-alpine sh"
+          ]
+        },
+        {
+          "id": "23",
+          "type": 4,
+          "content": "Ở đây mình khởi chạy một image với tên là node:10-alpine với option -it và arg là sh. Tức chạy image node:10-alpine là 1 image khi chạy lên sẽ tạo ra 1 container với hệ điều hành alpine và đã được cài đặt NodeJS và truy cập vào sh của container."
+        },
+        {
+          "id": "24",
+          "type": 10,
+          "content": [
+            "$ docker run -it node:10-alpine sh",
+            "Unable to find image 'node:10-alpine' locally",
+            "10-alpine: Pulling from library/node",
+            "c9b1b535fdd9: Already exists",
+            "0188bce71676: Pull complete",
+            "f62af20101b7: Pull complete",
+            "1bffdb76255c: Pull complete",
+            "Digest: sha256:6e6fdca8006b268936d285a4eadd0bac011b33184b4377c6f1cfc86c222fbb8d",
+            "Status: Downloaded newer image for node:10-alpine",
+            "/ #"
+          ]
+        },
+        {
+          "id": "25",
+          "type": 4,
+          "content": "Khi chạy câu lệnh run nếu image không có dưới máy của bạn thì docker sẽ kéo image đó từ registry về (ở đây là Docker Hub) và chạy image lên. Ta sẽ thử kiểm tra xem version của NodeJS được cài đặt sẵn trong container xem sao."
+        },
+        {
+          "id": "26",
+          "type": 10,
+          "content": ["/ # node -v", "v10.19.0"]
+        },
+        {
+          "id": "27",
+          "type": 4,
+          "content": "Vậy với image node:10-alpine bạn hoàn toàn có thể tiếp tục code Javascript mà không cần cài đặt NodeJS trên máy mình."
+        },
+        {
+          "id": "28",
+          "type": 10,
+          "content": ["/ # exit"]
+        },
+        {
+          "id": "29",
+          "type": 4,
+          "content": "Ta gõ command exit vào sh của container để thoát khỏi container và trở về máy host."
+        },
+        {
+          "id": "30",
+          "type": 6,
+          "content": {
+            "img": "/images/posts/docker-p1-05.png",
+            "text": "Show All Images On Your Machine"
+          }
+        },
+        {
+          "id": "31",
+          "type": 4,
+          "content": "Câu lệnh `docker images` giúp bạn hiển thị tất cả các image bạn đã pull về máy host. hiển thị các thông tin như tên image, size, tag image, thời gian pull image."
+        },
+        {
+          "id": "32",
+          "type": 6,
+          "content": {
+            "img": "/images/posts/docker-p1-06.png",
+            "text": "Manager Container"
+          }
+        },
+        {
+          "id": "33",
+          "type": 4,
+          "content": "Trên đây là 2 câu lệnh hay sử dụng để hiển thị các container trong máy host và container đang chạy. Ở đây do ta đã exit container do image node:10-alpine tạo ra lên nó đã được liệt vào các container đang không chạy. Ta sẽ thử restart lại container và truy cập vào bên trong container"
+        },
+        {
+          "id": "34",
+          "type": 6,
+          "content": {
+            "img": "/images/posts/docker-p1-07.png",
+            "text": "Manager Container"
+          }
+        },
+        {
+          "id": "35",
+          "type": 4,
+          "content": "Ta chỉ thị restart 1 container với CONTAINER ID là 7030d968d7b1. Sau đó ta thấy container được chuyển sang trạng thái đang chạy. Ta thử access vào trong container thông qua câu lệnh sau:"
+        },
+        {
+          "id": "36",
+          "type": 6,
+          "content": {
+            "img": "/images/posts/docker-p1-07.png",
+            "text": "Manager Container"
+          }
+        },
+        {
+          "id": "37",
+          "type": 3,
+          "content": "Thử tạo image của bản thân mình đâu tiên"
+        },
+        {
+          "id": "38",
+          "type": 4,
+          "content": "ở đây mình sẽ cùng các bạn thử tạo ra 1 image mà khi chạy nó sẽ in ra dòng chữ `Hello World` trên màn hình terminal"
+        },
+        {
+          "id": "39",
+          "type": 7,
+          "content": "https://gist.github.com/tuananh1998hust/69e470cf78dfcabf48ab547281637cf0.js"
         }
       ],
-      "img": "/images/docker.JPEG"
-    },
-    {
-      "id": "1",
-      "name": "Docker cơ bản(P2)",
-      "title": "Các bạn đã học Docker cơ bản(P1) chưa? Rồi thì click vô ngay đây để tiếp tục cùng giáo sư của NNVGM thử set up docker với 1 dự án thực xem sao...",
-      "contents": [],
       "category": [
         {
           "id": "1",
